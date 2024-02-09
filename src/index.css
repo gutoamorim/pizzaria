@@ -4,8 +4,21 @@
   box-sizing: border-box;
 }
 
+html,
 body {
   font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+main {
+  flex: 1;
 }
 
 a {
