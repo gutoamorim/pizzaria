@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-    <div className={styles.home}>
+    <div className={`container ${styles.home}`}>
       <div className={styles.left}>
         <h1>Pizzas 10% OFF</h1>
         <h2>Confira nosso cardápio</h2>

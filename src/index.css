@@ -31,8 +31,19 @@ ul {
   list-style: none;
 }
 
-button {
-  cursor: pointer;
+label {
+  color: #fbb304;
+  font-weight: bold;
+}
+
+input {
+  height: 2.5rem;
+  font-weight: 500;
+  border: 1px solid #fbb304;
+  border-radius: 4px;
+  outline: none;
+  padding: 0 0.75rem;
+  font-size: 1rem;
 }
 
 img {
@@ -48,13 +59,17 @@ img {
 }
 
 .button {
-  background-color: rgba(251, 179, 4, 0.8);
+  cursor: pointer;
+  font-weight: bold;
   color: #fff;
+  background-color: rgba(251, 179, 4, 0.8);
+  font-size: 1rem;
   padding: 0.5rem 1rem;
+  border: 0;
   border-radius: 4px;
   transition: ease-in-out 0.3s;
 }
 
 .button:hover {
-  background-color: #fbb304;
+  background-color: rgb(251, 179, 4);
 }
