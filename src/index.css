@@ -73,3 +73,18 @@ img {
 .button:hover {
   background-color: rgb(251, 179, 4);
 }
+
+.login {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 14px;
+  text-align: center;
+  color: darkgray;
+}
+
+.error {
+  color: red;
+  align-self: flex-start;
+  margin-top: 12px;
+  font-size: 12px;
+}

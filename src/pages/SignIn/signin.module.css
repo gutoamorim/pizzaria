@@ -32,10 +32,3 @@ form .inputGroup {
 form button {
   height: 2.5rem;
 }
-
-.error {
-  color: red;
-  align-self: flex-start;
-  margin-top: 12px;
-  font-size: 12px;
-}

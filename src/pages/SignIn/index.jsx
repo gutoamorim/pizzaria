@@ -1,7 +1,8 @@
-import { useForm } from "react-hook-form";
 import styles from "./signin.module.css";
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { Link } from "react-router-dom";
 
 const schema = z.object({
   email: z
@@ -36,20 +37,23 @@ export default function SignIn() {
               <label htmlFor="email">Email</label>
               <input type="email" id="email" {...register("email")} />
               {errors.email && (
-                <span className={styles.error}>{errors.email.message}</span>
+                <span className="error">{errors.email.message}</span>
               )}
             </div>
             <div className={styles.inputGroup}>
               <label htmlFor="password">Senha</label>
               <input type="password" id="password" {...register("password")} />
               {errors.password && (
-                <span className={styles.error}>{errors.password.message}</span>
+                <span className="error">{errors.password.message}</span>
               )}
             </div>
             <button className="button" type="submit">
               Entrar
             </button>
           </form>
+          <Link className="login" to="/signUp">
+            Não possui conta? Cadastre-se
+          </Link>
         </div>
       </div>
     </div>
