@@ -9,33 +9,26 @@
 }
 
 .formContainer {
-  margin: auto;
-  max-width: 320px;
-  padding: 2rem;
+  max-width: 400px;
   background-color: #fff;
+  padding: 1rem;
+  margin: auto;
   border: 0;
   border-radius: 4px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
-form {
+.row {
   display: flex;
   flex-direction: column;
+}
+
+.formGroup {
+  width: 100%;
+  display: flex;
   gap: 1rem;
 }
 
-form .inputGroup {
-  display: flex;
-  flex-direction: column;
-}
-
-form button {
-  height: 2.5rem;
-}
-
-.error {
-  color: red;
-  align-self: flex-start;
-  margin-top: 12px;
-  font-size: 12px;
+.formContainer input {
+  width: 100%;
 }

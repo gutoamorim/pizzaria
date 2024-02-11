@@ -1,18 +1,50 @@
+import { useForm } from "react-hook-form";
 import styles from "./signin.module.css";
+import { z } from "zod";
+import { zodResolver } from "@hookform/resolvers/zod";
+
+const schema = z.object({
+  email: z
+    .string()
+    .email("Digite um e-mail válido.")
+    .nonempty("O campo e´mail é obrigatporio"),
+  password: z
+    .string()
+    .nonempty("O campo senha é obrigatório")
+    .min(6, "A senha deve ter pelo menos 6 caravteres."),
+});
 
 export default function SignIn() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(schema),
+  });
+
+  function handleSign(data) {
+    console.log(data.email);
+  }
+
   return (
-    <div className={styles.container}>
+    <div className={styles.bg}>
       <div className="container">
         <div className={styles.formContainer}>
-          <form>
+          <form onSubmit={handleSubmit(handleSign)}>
             <div className={styles.inputGroup}>
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" />
+              <input type="email" id="email" {...register("email")} />
+              {errors.email && (
+                <span className={styles.error}>{errors.email.message}</span>
+              )}
             </div>
             <div className={styles.inputGroup}>
               <label htmlFor="password">Senha</label>
-              <input type="password" id="password" />
+              <input type="password" id="password" {...register("password")} />
+              {errors.password && (
+                <span className={styles.error}>{errors.password.message}</span>
+              )}
             </div>
             <button className="button" type="submit">
               Entrar
