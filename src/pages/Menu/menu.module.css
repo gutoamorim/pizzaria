@@ -1,0 +1,12 @@
+.title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}

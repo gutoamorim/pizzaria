@@ -1,13 +1,13 @@
 import styles from "./card.module.css";
 import pizza from "../../assets/camarao-c-catupiry.png";
 
-export default function Card() {
+export default function Card({ img, price, flavor, ingredients }) {
   return (
     <div className={styles.card}>
-      <img src={pizza} alt="Pizza de Camarão" />
-      <span> R$ 32,99</span>
-      <h1>Camarão com catupiry</h1>
-      <p>Molho, muçarela, camarões ao molho, catupiry e orégano.</p>
+      <img src={img} alt="Pizza de Camarão" />
+      <span> R$ {price}</span>
+      <h1>{flavor}</h1>
+      <p>{ingredients}</p>
     </div>
   );
 }
